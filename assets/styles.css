@@ -1,0 +1,462 @@
+/* this provides the visual design */
+
+/* ==========================================================
+   TRAFFIC VISION LAB
+   Exercise 1.1
+   ========================================================== */
+
+
+:root {
+    --bg: #050a12;
+    --panel: #0b1320;
+    --panel-light: #111d2d;
+
+    --border: rgba(148, 163, 184, 0.14);
+
+    --text: #f8fafc;
+    --muted: #8da0b7;
+
+    --green: #3ee889;
+    --cyan: #24c7e8;
+    --amber: #ffcf4b;
+    --red: #ff495c;
+}
+
+
+/* ----------------------------------------------------------
+   MAIN APPLICATION
+   ---------------------------------------------------------- */
+
+.stApp {
+    background:
+        radial-gradient(
+            circle at 15% 0%,
+            rgba(17, 55, 92, 0.40),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 92% 12%,
+            rgba(8, 86, 89, 0.16),
+            transparent 25%
+        ),
+        linear-gradient(
+            180deg,
+            #07101a 0%,
+            #050a12 45%,
+            #03070c 100%
+        );
+
+    color: var(--text);
+}
+
+
+/* ----------------------------------------------------------
+   HEADINGS
+   ---------------------------------------------------------- */
+
+.eyebrow {
+    color: #38d6f2;
+    font-size: 0.72rem;
+    font-weight: 750;
+    letter-spacing: 0.15rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.45rem;
+}
+
+.main-title {
+    color: #ffffff;
+    font-size: 3rem;
+    line-height: 1.04;
+    font-weight: 850;
+    letter-spacing: -0.055em;
+}
+
+.main-subtitle {
+    color: var(--muted);
+    font-size: 1.02rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+/* ----------------------------------------------------------
+   SYSTEM STATUS
+   ---------------------------------------------------------- */
+
+.system-status {
+    width: fit-content;
+    margin-left: auto;
+    margin-top: 1.3rem;
+
+    background: rgba(17, 38, 34, 0.62);
+
+    border:
+        1px solid
+        rgba(62, 232, 137, 0.28);
+
+    border-radius: 999px;
+
+    padding:
+        0.58rem
+        0.85rem;
+
+    color: #7af2ac;
+
+    font-size: 0.72rem;
+
+    font-weight: 750;
+
+    letter-spacing:
+        0.05rem;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+
+    display: inline-block;
+
+    border-radius: 50%;
+
+    background:
+        #3ee889;
+
+    margin-right:
+        0.42rem;
+
+    box-shadow:
+        0 0 9px
+        rgba(62, 232, 137, 0.8);
+}
+
+
+/* ----------------------------------------------------------
+   PIPELINE STRIP
+   ---------------------------------------------------------- */
+
+.pipeline-strip {
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(13, 27, 43, 0.92),
+            rgba(7, 19, 30, 0.88)
+        );
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        12px;
+
+    padding:
+        0.78rem
+        1rem;
+
+    margin-bottom:
+        1.4rem;
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    align-items:
+        center;
+
+    gap:
+        0.75rem;
+
+    color:
+        #a9b9ca;
+
+    font-size:
+        0.70rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.055rem;
+}
+
+.pipeline-strip span {
+
+    background:
+        rgba(
+            30,
+            51,
+            70,
+            0.65
+        );
+
+    border:
+        1px solid
+        rgba(
+            99,
+            133,
+            162,
+            0.14
+        );
+
+    border-radius:
+        7px;
+
+    padding:
+        0.36rem
+        0.55rem;
+}
+
+.pipeline-strip b {
+    color:
+        #38d6f2;
+}
+
+
+/* ----------------------------------------------------------
+   METRICS
+   ---------------------------------------------------------- */
+
+div[data-testid="stMetric"] {
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(15, 28, 43, 0.96),
+            rgba(8, 18, 29, 0.94)
+        );
+
+    border:
+        1px solid
+        rgba(
+            115,
+            148,
+            177,
+            0.14
+        );
+
+    border-radius:
+        13px;
+
+    padding:
+        1rem;
+
+    box-shadow:
+        0 10px 34px
+        rgba(0, 0, 0, 0.18);
+}
+
+div[data-testid="stMetricLabel"] {
+    color:
+        #8ea2b8;
+}
+
+div[data-testid="stMetricValue"] {
+    color:
+        #f7fbff;
+}
+
+
+/* ----------------------------------------------------------
+   TABS
+   ---------------------------------------------------------- */
+
+button[data-baseweb="tab"] {
+
+    border-radius:
+        8px;
+
+    padding-left:
+        1rem;
+
+    padding-right:
+        1rem;
+}
+
+
+/* ----------------------------------------------------------
+   BUTTONS
+   ---------------------------------------------------------- */
+
+div.stButton > button {
+
+    min-height:
+        2.8rem;
+
+    border-radius:
+        9px;
+
+    font-weight:
+        750;
+
+    letter-spacing:
+        0.015rem;
+}
+
+div.stButton > button[kind="primary"] {
+
+    background:
+        linear-gradient(
+            90deg,
+            #16b966,
+            #2cce7a
+        );
+
+    color:
+        #04100a;
+
+    border:
+        none;
+
+    box-shadow:
+        0 8px 30px
+        rgba(32, 200, 111, 0.18);
+}
+
+
+/* ----------------------------------------------------------
+   VIDEO PLACEHOLDER
+   ---------------------------------------------------------- */
+
+.empty-monitor {
+
+    min-height:
+        460px;
+
+    border-radius:
+        16px;
+
+    border:
+        1px dashed
+        rgba(97, 135, 165, 0.35);
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(16, 43, 60, 0.45),
+            rgba(5, 13, 22, 0.92)
+        );
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+
+    margin-top:
+        0.8rem;
+}
+
+.monitor-icon {
+
+    color:
+        #3ee889;
+
+    font-size:
+        3rem;
+
+    margin-bottom:
+        1rem;
+
+    text-shadow:
+        0 0 24px
+        rgba(62, 232, 137, 0.45);
+}
+
+.monitor-title {
+
+    font-size:
+        1.25rem;
+
+    color:
+        #ecf5ff;
+
+    font-weight:
+        700;
+
+    margin-bottom:
+        0.45rem;
+}
+
+.monitor-text {
+
+    color:
+        #859ab0;
+
+    font-size:
+        0.9rem;
+}
+
+
+/* ----------------------------------------------------------
+   DATAFRAME
+   ---------------------------------------------------------- */
+
+div[data-testid="stDataFrame"] {
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        12px;
+
+    overflow:
+        hidden;
+}
+
+
+/* ----------------------------------------------------------
+   SIDEBAR
+   ---------------------------------------------------------- */
+
+section[data-testid="stSidebar"] {
+
+    background:
+        linear-gradient(
+            180deg,
+            #08111c,
+            #050b12
+        );
+
+    border-right:
+        1px solid
+        rgba(120, 151, 177, 0.12);
+}
+
+
+/* ----------------------------------------------------------
+   IMAGES AND VIDEO
+   ---------------------------------------------------------- */
+
+div[data-testid="stImage"] img {
+
+    border-radius:
+        10px;
+
+    border:
+        1px solid
+        rgba(116, 149, 176, 0.12);
+}
+
+
+/* ----------------------------------------------------------
+   DIVIDERS
+   ---------------------------------------------------------- */
+
+hr {
+
+    border-color:
+        rgba(115, 145, 172, 0.12) !important;
+}

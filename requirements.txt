@@ -1,0 +1,10 @@
+streamlit>=1.61,<2
+opencv-python-headless
+numpy
+pandas
+torch
+torchvision
+supervision
+rfdetr
+trackers
+imageio-ffmpeg
